@@ -125,7 +125,7 @@
     <link rel="icon" type="image/png" href="resources/seal_icon.png">
     <title>Curiosity-driven Exploration by Self-supervised Prediction</title>
     <meta property='og:title' content='Curiosity-driven Exploration by Self-supervised Prediction' />
-    <meta property="og:description" content="Pathak, Agrawal, Efros, Darrell. Curiosity-driven Exploration by Self-supervised Prediction. In ICML, 2017." />
+    <meta property="og:description" content="Bernadette Bucher, Anton Arapin, Ramanan Sekar, Feifei Duan, Marc Badger, Oleh Rybkin, Kostas Daniilidis. Perception-Driven Curiosity with Bayesian Surprise. In NeurIPS, 2019." />
     <meta property='og:url' content='https://antonarapin.github.io/c_shell/' />
   </head>
 
@@ -135,19 +135,6 @@
         <table align=center width=800px>
           <tr>
             <td align=center width=150px>
-                   Bernadette Bucher
-    \And
-    Anton Arapin
-    \And
-    Ramanan Sekar
-    \And
-    Feifei Duan
-    \And
-    Marc Badger
-    \And
-    Oleh Rybkin
-    \And
-    Kostas Daniilidis
             <center><span style="font-size:24px"><a href="google.com" target="_blank">Bernadette Bucher</a></span></center></td>
             <td align=center width=150px>
             <center><span style="font-size:24px"><a href="google.com" target="_blank">Anton Arapin</a></span></center></td>
@@ -177,6 +164,7 @@
         <table align=center width=500px>
           <tr>
             <td align=center width=200px><center><span style="font-size:24px"><a href="google.com">[Download Paper]</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:24px"><a href="google.com">[Download Poster]</a></span></center></td>
             <td align=center width=200px><center><span style="font-size:24px"><a href='https://github.com/daniilidis-group/surprise/'>[Github Code]</a></span></center></td>
           <tr/>
         </table><br/>
@@ -189,7 +177,7 @@
 
         <br>
 
-        In many real-world scenarios, rewards extrinsic to the agent are extremely sparse, or absent altogether. In such cases, curiosity can serve as an intrinsic reward signal to enable the agent to explore its environment and learn skills that might be useful later in its life. We formulate curiosity as the error in an agent's ability to predict the consequence of its own actions in a visual feature space learned by a self-supervised inverse dynamics model. Our formulation scales to high-dimensional continuous state spaces like images, bypasses the difficulties of directly predicting pixels, and, critically, ignores the aspects of the environment that cannot affect the agent. The proposed approach is evaluated in two environments: <i>VizDoom</i> and <i>Super Mario Bros</i>. Three broad settings are investigated: 1) sparse extrinsic reward, where curiosity allows for far fewer interactions with the environment to reach the goal; 2) exploration with no extrinsic reward, where curiosity pushes the agent to explore more efficiently; and 3) generalization to unseen scenarios (e.g. new levels of the same game) where the knowledge gained from earlier experience helps the agent explore new places much faster than starting from scratch.
+    Intrinsic rewards in reinforcement learning provide a powerful algorithmic capability for agents to learn how to interact with their environment in a task-generic way. We introduce a method for computing an intrinsic reward for curiosity using a measurement of how well agents can perceive their environment. Our agents learn a model of their environment via a conditional variational autoencoder (CVAE). Our measurement of surprise for a given outcome is computed by sampling the latent space of our CVAE and computing an associated conditional probability of the current state given the previous state. For our experiments, a video game agent uses our model to autonomously learn how to play Atari games without extrinsic rewards. We find that our perception module learns to accurately reconstruct scenes from each game. We also show that the policy learned by an agent using our probabilistic formulation of surprise outperforms policies learned with other reward schemes based on heuristics such as pixel-level reconstruction error.
 
       <br>
       <br>
@@ -198,7 +186,12 @@
         <center id="demoVideo"><h1>Demo Video</h1></center>
           <table align=center width=600px>
             <tr><td align=center width=600px>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/J3FHOyhUn3A" frameborder="0" allowfullscreen></iframe>
+            <iframe width="800" height="450" src="https://www.youtube.com/watch?v=_sUeGC-8dyk" frameborder="0" allowfullscreen></iframe>
+            </td></tr>
+          </table>
+          <table align=center width=600px>
+            <tr><td align=center width=600px>
+            <iframe width="800" height="450" src="https://www.youtube.com/watch?v=_sUeGC-8dyk" frameborder="0" allowfullscreen></iframe>
             </td></tr>
           </table>
 
